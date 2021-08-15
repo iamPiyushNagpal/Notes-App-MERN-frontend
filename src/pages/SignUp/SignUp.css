@@ -1,0 +1,17 @@
+.sign-up {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up form h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sign-up form label,
+input {
+  display: block;
+}
