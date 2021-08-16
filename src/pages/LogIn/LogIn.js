@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import './LogIn.css';
 import axios from 'axios';
+import { useHistory } from "react-router-dom";
 
 const LogIn = () => {
 
+    const history = useHistory();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -16,6 +18,7 @@ const LogIn = () => {
             .then((res) => {
                 console.log(res);
                 localStorage.setItem("userToken", res.data.token);
+                history.push("/");
             })
             .catch((e) => console.log(e.message))
     }
