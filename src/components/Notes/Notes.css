@@ -5,5 +5,23 @@
 }
 
 .notes {
-  padding: 10px;
+  padding: 10px 30px;
+}
+
+@media (min-width: 576px) {
+  .notes {
+    padding: 10px 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .notes {
+    padding: 10px 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .notes {
+    padding: 10px 150px;
+  }
 }
