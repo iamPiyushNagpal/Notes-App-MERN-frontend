@@ -19,7 +19,7 @@ const Notes = () => {
     return (
         <div className="notes">
             <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 750: 3, 900: 4, 1200: 5 }}>
-                <Masonry gutter={20}>
+                <Masonry gutter={"20px"}>
                     {data && data.map((note) => (
                         <div className="note" key={note._id}>
                             <h1>{note.title}</h1>
