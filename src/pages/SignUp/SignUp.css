@@ -1,8 +1,13 @@
 .sign-up {
-  /* height: 100vh; */
+  height: 90vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.sign-up form {
+  width: 400px;
 }
 
 .sign-up form h1 {
@@ -14,4 +19,38 @@
 .sign-up form label,
 input {
   display: block;
+}
+
+.sign-up form input {
+  width: 100%;
+  outline: none;
+  border: 0;
+  border-bottom: 2px solid lightgrey;
+  padding: 7px 0;
+}
+
+.sign-up form label {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  color: grey;
+}
+
+.sign-up form button {
+  width: 100%;
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+}
+
+.sign-up p {
+  margin-top: 40px;
+  color: grey;
+}
+
+.login-page-link {
+  color: black;
+  font-weight: bold;
 }

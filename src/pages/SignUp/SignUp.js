@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './SignUp.css';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
 
@@ -37,12 +38,13 @@ const SignUp = () => {
                 />
                 <label>Password</label>
                 <input
-                    type="text"
+                    type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <button>Sign Up</button>
             </form>
+            <p>Already have an account? <Link className="login-page-link" to="/login">Log In here</Link></p>
         </div>
     );
 }
