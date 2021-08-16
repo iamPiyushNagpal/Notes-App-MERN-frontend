@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
-import './Note.css';
+import './Notes.css';
 
 const Notes = () => {
 
