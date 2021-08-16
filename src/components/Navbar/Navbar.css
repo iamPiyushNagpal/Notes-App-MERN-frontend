@@ -1,10 +1,48 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px;
 }
 
 .navbar h1 {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.navbar input {
+  padding: 7px 3px;
+  border: 2px solid grey;
+  border-radius: 7px;
+  outline: none;
+}
+
+.navbar input::placeholder {
+  text-align: center;
+}
+
+.navbar button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 7px;
+}
+
+@media (min-width: 768px) {
+  .navbar input {
+    width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar input {
+    width: 350px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar input {
+    width: 400px;
+  }
 }
