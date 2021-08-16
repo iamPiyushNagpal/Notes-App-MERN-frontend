@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './LogIn.css';
 import axios from 'axios';
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const LogIn = () => {
 
@@ -35,12 +35,13 @@ const LogIn = () => {
                 />
                 <label>Password</label>
                 <input
-                    type="text"
+                    type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <button>Log In</button>
             </form>
+            <p>Don't have an account? <Link className="signup-page-link" to="/signup">Sign Up here</Link></p>
         </div>
     );
 }

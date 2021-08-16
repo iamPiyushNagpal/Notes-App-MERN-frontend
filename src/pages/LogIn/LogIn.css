@@ -1,8 +1,13 @@
 .log-in {
-  /* height: 100vh; */
+  height: 80vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.log-in form {
+  width: 400px;
 }
 
 .log-in form h1 {
@@ -14,4 +19,38 @@
 .log-in form label,
 input {
   display: block;
+}
+
+.log-in form input {
+  width: 100%;
+  outline: none;
+  border: 0;
+  border-bottom: 2px solid lightgrey;
+  padding: 7px 0;
+}
+
+.log-in form label {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  color: grey;
+}
+
+.log-in form button {
+  width: 100%;
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+}
+
+.log-in p {
+  margin-top: 40px;
+  color: grey;
+}
+
+.signup-page-link {
+  color: black;
+  font-weight: bold;
 }
