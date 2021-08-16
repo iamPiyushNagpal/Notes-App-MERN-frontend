@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Notes from "../../components/Notes/Notes"
 import { useHistory } from "react-router-dom";
+import NewNoteInput from "../../components/NewNoteInput/NewNoteInput";
 
 const Home = () => {
 
@@ -17,6 +18,7 @@ const Home = () => {
     return (
         <div className="home">
             <Navbar />
+            <NewNoteInput />
             <Notes />
         </div>
     );
