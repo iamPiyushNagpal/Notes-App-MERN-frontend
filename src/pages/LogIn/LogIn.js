@@ -13,7 +13,10 @@ const LogIn = () => {
             email,
             password
         })
-            .then((res) => console.log(res))
+            .then((res) => {
+                console.log(res);
+                localStorage.setItem("userToken", res.data.token);
+            })
             .catch((e) => console.log(e.message))
     }
 
