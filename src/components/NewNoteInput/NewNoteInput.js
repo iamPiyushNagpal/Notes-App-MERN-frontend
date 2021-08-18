@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import './NewNoteInput.css';
 
-const NewNoteInput = () => {
+const NewNoteInput = ({ getNotes }) => {
 
     const [showInputFields, setShowInputFields] = useState(false);
     const [title, setTitle] = useState("");
@@ -18,7 +18,10 @@ const NewNoteInput = () => {
             title,
             description
         })
-            .then((res) => console.log(res))
+            .then((res) => {
+                console.log(res);
+                getNotes();
+            })
             .catch((e) => console.log(e.message))
     }
 
