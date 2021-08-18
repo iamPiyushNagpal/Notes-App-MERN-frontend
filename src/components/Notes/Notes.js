@@ -3,7 +3,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import './Notes.css';
 import Modal from '../Modal/Modal';
 
-const Notes = ({ data }) => {
+const Notes = ({ data, getNotes }) => {
 
     const [showModal, setShowModal] = useState(false);
     const [note, setNote] = useState(null);
@@ -25,7 +25,7 @@ const Notes = ({ data }) => {
                     ))}
                 </Masonry>
             </ResponsiveMasonry>
-            {showModal && <Modal setShowModal={setShowModal} note={note} />}
+            {showModal && <Modal setShowModal={setShowModal} note={note} getNotes={getNotes} />}
         </div>
     );
 }

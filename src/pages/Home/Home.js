@@ -31,7 +31,7 @@ const Home = () => {
         <div className="home">
             <Navbar />
             <NewNoteInput getNotes={getNotes} />
-            <Notes data={data} />
+            <Notes getNotes={getNotes} data={data} />
         </div>
     );
 }
