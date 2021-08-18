@@ -1,6 +1,6 @@
 import './Modal.css';
 
-const Modal = ({ title, description, setShowModal }) => {
+const Modal = ({ note, setShowModal }) => {
 
     const handleCloseButton = () => {
         setShowModal(false);
@@ -9,8 +9,8 @@ const Modal = ({ title, description, setShowModal }) => {
     return (
         <div className="modal">
             <div className="modal__content">
-                <h1>{title}</h1>
-                <p>{description}</p>
+                <h1>{note.title}</h1>
+                <p>{note.description}</p>
             </div>
             <div className="modal__buttons">
                 <button><svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
