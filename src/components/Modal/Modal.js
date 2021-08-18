@@ -14,6 +14,7 @@ const Modal = ({ note, setShowModal, getNotes }) => {
         })
             .then((res) => {
                 console.log(res);
+                setShowModal(false);
                 getNotes();
             })
             .catch((e) => console.log(e.message))
