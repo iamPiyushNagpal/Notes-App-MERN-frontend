@@ -20,6 +20,8 @@ const NewNoteInput = ({ getNotes }) => {
         })
             .then((res) => {
                 console.log(res);
+                setTitle("");
+                setDescription("");
                 getNotes();
             })
             .catch((e) => console.log(e.message))
