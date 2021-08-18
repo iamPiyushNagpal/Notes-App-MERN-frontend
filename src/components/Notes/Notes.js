@@ -1,24 +1,13 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import './Notes.css';
 import Modal from '../Modal/Modal';
 
-const Notes = () => {
+const Notes = ({ data }) => {
 
-    const [data, setData] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [description, setDescription] = useState("");
     const [title, setTitle] = useState("");
-
-    useEffect(() => {
-        axios.get('http://localhost:3001/get-notes')
-            .then((res) => {
-                console.log(res);
-                setData(res.data.notes);
-            })
-            .catch((e) => console.log(e.message))
-    }, []);
 
     const handleModal = (title, description) => {
         setShowModal(true);
