@@ -9,6 +9,7 @@ const Home = () => {
 
     const history = useHistory();
     const [data, setData] = useState([]);
+    const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
         const token = localStorage.getItem("userToken");
@@ -27,11 +28,25 @@ const Home = () => {
             .catch((e) => console.log(e.message))
     };
 
+    const filterData = () => {
+        if (!searchQuery)
+            return data;
+
+        return data.filter((note) => {
+            return (
+                note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                note.description.toLowerCase().includes(searchQuery.toLowerCase())
+            );
+        })
+    }
+
+    const filteredData = filterData();
+
     return (
         <div className="home">
-            <Navbar />
+            <Navbar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
             <NewNoteInput getNotes={getNotes} />
-            <Notes getNotes={getNotes} data={data} />
+            <Notes getNotes={getNotes} data={filteredData} />
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import './Navbar.css';
 import { useHistory } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ setSearchQuery, searchQuery }) => {
 
     const history = useHistory();
 
@@ -16,6 +16,8 @@ const Navbar = () => {
             <input
                 type="text"
                 placeholder="Search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
             />
             <button onClick={handleLogOut}>Log Out</button>
         </div>
