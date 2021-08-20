@@ -22,6 +22,7 @@ const NewNoteInput = ({ getNotes }) => {
                 console.log(res);
                 setTitle("");
                 setDescription("");
+                setShowInputFields(false);
                 getNotes();
             })
             .catch((e) => console.log(e.message))
