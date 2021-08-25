@@ -6,6 +6,7 @@ const Modal = ({ note, setShowModal, getNotes }) => {
 
     const [titleUpdate, setTitleUpdate] = useState(note.title);
     const [descriptionUpdate, setDescriptionUpdate] = useState(note.description);
+    const token = localStorage.getItem("userToken");
 
     const handleCloseButton = () => {
         setShowModal(false);
@@ -19,7 +20,7 @@ const Modal = ({ note, setShowModal, getNotes }) => {
             .then((res) => {
                 console.log(res);
                 setShowModal(false);
-                getNotes();
+                getNotes(token);
             })
             .catch((e) => console.log(e.message))
     }
@@ -34,7 +35,7 @@ const Modal = ({ note, setShowModal, getNotes }) => {
             .then((res) => {
                 console.log(res);
                 setShowModal(false);
-                getNotes();
+                getNotes(token);
             })
             .catch((e) => console.log(e.message))
     }

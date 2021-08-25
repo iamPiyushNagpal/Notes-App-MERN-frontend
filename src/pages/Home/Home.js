@@ -16,11 +16,13 @@ const Home = () => {
         console.log(token);
         if (!token)
             history.push('/login');
-        getNotes();
+        getNotes(token);
     }, []);
 
-    const getNotes = () => {
-        axios.get('http://localhost:3001/get-notes')
+    const getNotes = (token) => {
+        axios.get('http://localhost:3001/get-notes', {
+            headers: { "Authorization": token }
+        })
             .then((res) => {
                 console.log(res);
                 setData(res.data.notes);

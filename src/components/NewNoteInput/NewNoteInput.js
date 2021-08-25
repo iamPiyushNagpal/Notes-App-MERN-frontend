@@ -7,6 +7,7 @@ const NewNoteInput = ({ getNotes }) => {
     const [showInputFields, setShowInputFields] = useState(false);
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
+    const token = localStorage.getItem("userToken");
 
     const handleInputFieldClick = () => {
         setShowInputFields(true);
@@ -14,16 +15,15 @@ const NewNoteInput = ({ getNotes }) => {
 
     const handleAddNewNote = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3001/create-note', {
-            title,
-            description
+        axios.post('http://localhost:3001/create-note', { title, description }, {
+            headers: { "Authorization": token }
         })
             .then((res) => {
                 console.log(res);
                 setTitle("");
                 setDescription("");
                 setShowInputFields(false);
-                getNotes();
+                getNotes(token);
             })
             .catch((e) => console.log(e.message))
     }
