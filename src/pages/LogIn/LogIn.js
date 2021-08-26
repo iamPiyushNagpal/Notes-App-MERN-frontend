@@ -30,12 +30,14 @@ const LogIn = () => {
                 <label>Email</label>
                 <input
                     type="text"
+                    required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <label>Password</label>
                 <input
                     type="password"
+                    required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
