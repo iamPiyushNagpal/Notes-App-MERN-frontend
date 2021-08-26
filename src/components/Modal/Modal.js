@@ -14,9 +14,9 @@ const Modal = ({ note, setShowModal, getNotes }) => {
 
     const handleDeleteNote = (e) => {
         e.preventDefault();
-        axios.delete('http://localhost:3001/delete-note', {
-            data: { id: note._id }
-        })
+        axios.delete('http://localhost:3001/delete-note',
+            { data: { id: note._id }, headers: { "Authorization": token } },
+        )
             .then((res) => {
                 console.log(res);
                 setShowModal(false);
@@ -28,9 +28,9 @@ const Modal = ({ note, setShowModal, getNotes }) => {
     const handleUpdateNote = async (e) => {
         e.preventDefault();
 
-        axios.patch('http://localhost:3001/update-note', {
-            id: note._id, title: titleUpdate, description: descriptionUpdate
-        }
+        axios.patch('http://localhost:3001/update-note',
+            { id: note._id, title: titleUpdate, description: descriptionUpdate },
+            { headers: { "Authorization": token } }
         )
             .then((res) => {
                 console.log(res);
