@@ -11,7 +11,7 @@ const LogIn = () => {
 
     const logIn = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3001/login', {
+        axios.post('https://notes-app-mern-backend.herokuapp.com/login', {
             email,
             password
         })

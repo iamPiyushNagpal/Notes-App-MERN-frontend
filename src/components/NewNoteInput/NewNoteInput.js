@@ -15,7 +15,7 @@ const NewNoteInput = ({ getNotes }) => {
 
     const handleAddNewNote = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3001/create-note', { title, description }, {
+        axios.post('https://notes-app-mern-backend.herokuapp.com/create-note', { title, description }, {
             headers: { "Authorization": token }
         })
             .then((res) => {

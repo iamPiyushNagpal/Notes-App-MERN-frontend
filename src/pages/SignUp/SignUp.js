@@ -11,7 +11,7 @@ const SignUp = () => {
 
     const signUp = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3001/signup', {
+        axios.post('https://notes-app-mern-backend.herokuapp.com/signup', {
             name,
             email,
             password

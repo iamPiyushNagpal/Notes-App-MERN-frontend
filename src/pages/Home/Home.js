@@ -20,7 +20,7 @@ const Home = () => {
     }, []);
 
     const getNotes = (token) => {
-        axios.get('http://localhost:3001/get-notes', {
+        axios.get('https://notes-app-mern-backend.herokuapp.com/get-notes', {
             headers: { "Authorization": token }
         })
             .then((res) => {
