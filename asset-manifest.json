@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Notes-App-MERN/static/css/main.f48c8818.chunk.css",
-    "main.js": "/Notes-App-MERN/static/js/main.91d784c3.chunk.js",
-    "main.js.map": "/Notes-App-MERN/static/js/main.91d784c3.chunk.js.map",
-    "runtime-main.js": "/Notes-App-MERN/static/js/runtime-main.5b05f1c0.js",
-    "runtime-main.js.map": "/Notes-App-MERN/static/js/runtime-main.5b05f1c0.js.map",
-    "static/js/2.1f859828.chunk.js": "/Notes-App-MERN/static/js/2.1f859828.chunk.js",
-    "static/js/2.1f859828.chunk.js.map": "/Notes-App-MERN/static/js/2.1f859828.chunk.js.map",
-    "index.html": "/Notes-App-MERN/index.html",
-    "static/css/main.f48c8818.chunk.css.map": "/Notes-App-MERN/static/css/main.f48c8818.chunk.css.map",
-    "static/js/2.1f859828.chunk.js.LICENSE.txt": "/Notes-App-MERN/static/js/2.1f859828.chunk.js.LICENSE.txt"
+    "main.css": "/Notes-App-MERN-frontend/static/css/main.f48c8818.chunk.css",
+    "main.js": "/Notes-App-MERN-frontend/static/js/main.91d784c3.chunk.js",
+    "main.js.map": "/Notes-App-MERN-frontend/static/js/main.91d784c3.chunk.js.map",
+    "runtime-main.js": "/Notes-App-MERN-frontend/static/js/runtime-main.78251025.js",
+    "runtime-main.js.map": "/Notes-App-MERN-frontend/static/js/runtime-main.78251025.js.map",
+    "static/js/2.1f859828.chunk.js": "/Notes-App-MERN-frontend/static/js/2.1f859828.chunk.js",
+    "static/js/2.1f859828.chunk.js.map": "/Notes-App-MERN-frontend/static/js/2.1f859828.chunk.js.map",
+    "index.html": "/Notes-App-MERN-frontend/index.html",
+    "static/css/main.f48c8818.chunk.css.map": "/Notes-App-MERN-frontend/static/css/main.f48c8818.chunk.css.map",
+    "static/js/2.1f859828.chunk.js.LICENSE.txt": "/Notes-App-MERN-frontend/static/js/2.1f859828.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5b05f1c0.js",
+    "static/js/runtime-main.78251025.js",
     "static/js/2.1f859828.chunk.js",
     "static/css/main.f48c8818.chunk.css",
     "static/js/main.91d784c3.chunk.js"
