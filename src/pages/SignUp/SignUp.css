@@ -16,6 +16,11 @@
   text-align: center;
 }
 
+.sign-up form p {
+  color: red;
+  text-align: center;
+}
+
 .sign-up form label,
 input {
   display: block;

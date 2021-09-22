@@ -8,6 +8,7 @@ const SignUp = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
 
     const signUp = (e) => {
         e.preventDefault();
@@ -16,7 +17,10 @@ const SignUp = () => {
             email,
             password
         })
-            .then((res) => console.log(res))
+            .then((res) => {
+                console.log(res);
+                setError(res.data.message);
+            })
             .catch((e) => console.log(e.message))
     }
 
@@ -24,6 +28,7 @@ const SignUp = () => {
         <div className="sign-up">
             <form onSubmit={signUp}>
                 <h1>Sign Up</h1>
+                <p>{error}</p>
                 <label>Name</label>
                 <input
                     type="text"

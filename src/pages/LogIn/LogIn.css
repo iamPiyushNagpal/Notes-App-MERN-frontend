@@ -16,6 +16,11 @@
   text-align: center;
 }
 
+.log-in form p {
+  color: red;
+  text-align: center;
+}
+
 .log-in form label,
 input {
   display: block;
